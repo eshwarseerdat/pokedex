@@ -1,8 +1,41 @@
 body {
     margin: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #ffeea4;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
 }
 
-#body {
-    display: none;
+#grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-template-areas: ". header ."
+    ". searchBar ."
+    "stats image moves";
 }
+
+h1 {
+    grid-area: header;
+    justify-self: center;
+}
+
+#stats {
+    grid-area: stats;
+}
+
+#image {
+    grid-area: image;
+}
+
+#moves {
+    grid-area: moves;
+}
+
+#searchBar {
+    grid-area: searchBar;
+    justify-self: center;
+    align-self: center;
+}
+
