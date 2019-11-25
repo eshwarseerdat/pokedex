@@ -2,35 +2,48 @@ body {
     margin: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     scroll-behavior: smooth;
-    background-color: #ffeea4;
-    background-size: 100%;
+    background-image: linear-gradient(to bottom, #7b83a4, #10314a, 
+    #4a6a7b);
     background-repeat: no-repeat;
-    
+    height: 100vh;
 }
 
 #grid {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    grid-template-areas: ". header ."
+    grid-template-areas: "bg2 header bg1"
     ". searchBar ."
     "stats image moves";
+    gap: 10px;
 }
 
 h1 {
     grid-area: header;
     justify-self: center;
+    align-self: center;
+}
+
+#btn {
+    cursor: pointer;
 }
 
 #stats {
     grid-area: stats;
+    text-align: center;
+    width: 100%;
+
 }
 
 #image {
     grid-area: image;
+    text-align: center;
+    width: 100%;
 }
 
 #moves {
     grid-area: moves;
+    text-align: center;
+    width: 100%;
 }
 
 #searchBar {
@@ -38,4 +51,5 @@ h1 {
     justify-self: center;
     align-self: center;
 }
+
 
